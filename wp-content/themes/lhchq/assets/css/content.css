@@ -123,6 +123,14 @@
   padding-left: 4px;
 }
 
+#team-members .team-member-container .team-member .name img.muted {
+  width: 10px;
+  margin-right: 4px;
+  margin-top: 3px;
+  margin-left: -2px;
+  float: left;
+}
+
 #team-members .team-member-container .team-member .name svg {
   fill: #dc2b30;
   width: 12px;

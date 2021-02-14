@@ -1,0 +1,129 @@
+/* Header */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  padding: 30px;
+}
+
+.site-header.accommodate-adminbar {
+  top: 32px;
+}
+
+.site-header #header-logos {
+  float: right;
+}
+
+.site-header #header-logos img.amazon-pay {
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 70px;
+}
+
+.site-header #header-logos img.case-study-logo.white {
+  display: block;
+}
+
+.site-header #header-logos img.case-study-logo.color {
+  display: none;
+}
+
+.site-header #header-logos img#lhc {
+  height: 17px;
+}
+
+.site-header #header-logos img#lhc.white {
+  filter: invert(1);
+}
+
+.site-header.inverse .hamburger-inner, .site-header.inverse .hamburger-inner::before, .site-header.inverse .hamburger-inner::after {
+  background: #ffffff;
+}
+
+/* Sidebar */
+
+#sidebar-nav-container {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  padding: 60px 25px 0 40px;
+  height: 100%;
+  background: #ffffff;
+  z-index: 999;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  transition:         all 0.2s ease;
+  overflow-y: scroll;
+}
+
+#sidebar-nav-container.is-active {
+  left: 0px;
+}
+
+#sidebar-nav-container .sidebar-menu-container {
+  float: left;
+  margin-left: 7px;
+  margin-top: -125px;
+}
+
+#sidebar-nav-container .sidebar-menu-container ul {
+  margin-bottom: 1.5rem;
+}
+
+#sidebar-nav-container .sidebar-menu-container ul li {
+  padding: 0.25rem 0;
+  -webkit-font-smoothing: antialiased;
+  transform: translateX(-50%);
+  -webkit-transition: transform 0.3s, opacity 1s;
+  -moz-transition:    transform 0.3s, opacity 1s;
+  -o-transition:      transform 0.3s, opacity 1s;
+  -ms-transition:     transform 0.3s, opacity 1s;
+  transition:         transform 0.3s, opacity 1s;
+  opacity: 0;
+  font-size: 30px;
+  line-height: 36px;
+  /* font-family: "Helvetica Neue", helvetica, sans serif;
+  font-weight: bold; */
+  font-family: "Canela", serif;
+  font-weight: 300;
+}
+
+#sidebar-nav-container .sidebar-menu-container ul li.is-active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+
+#sidebar-nav-container .sidebar-menu-container ul li a {
+  color: #000000;
+}
+
+#sidebar-nav-container .sidebar-menu-container ul li a:hover {
+  color: #ff2a6e;
+}
+
+
+#sidebar-nav-container .socials-nav {
+  display: none;
+}
+
+
+/* Overlay */
+
+#main-body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  z-index: 900;
+  display: none;
+}

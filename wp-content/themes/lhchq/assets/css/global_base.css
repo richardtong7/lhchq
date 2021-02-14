@@ -512,13 +512,134 @@ h2 {
 }
 
 
-/* Newsletter  */
+/* Newsletter / Clients  */
 
-#newsletter-listings li.item {
+#newsletter-listings li.item, #client-listings li.item {
   font-size: 100px;
   font-family: "Canela", serif;
   line-height: 100px;
   font-weight: 300;
+}
+
+#client-listings li.item img {
+  max-height: 27px;
+  float: right;
+}
+
+#client-listings li.item {
+  justify-content: space-between;
+}
+
+#client-listings li.item img#alexa-fund {
+  max-height: 23px;
+}
+
+#client-listings li.item img#andela {
+  max-height: 35px;
+}
+
+#client-listings li.item img#ceros {
+  max-height: 20px;
+}
+
+#client-listings li.item img#cloudera {
+  max-height: 18px;
+}
+
+#client-listings li.item img#comcast {
+  max-height: 35px;
+}
+
+#client-listings li.item img#digital-asset {
+  max-height: 25px;
+}
+
+#client-listings li.item img#facebook {
+  max-height: 15px;
+}
+
+#client-listings li.item img#foleon {
+  max-height: 30px;
+}
+
+#client-listings li.item img#gumgum {
+  max-height: 35px;
+}
+
+#client-listings li.item img#hcl {
+  max-height: 15px;
+}
+
+#client-listings li.item img#himss {
+  max-height: 40px;
+}
+
+#client-listings li.item img#harvard-business-school {
+  max-height: 40px;
+}
+
+#client-listings li.item img#hyperscience {
+  max-height: 35px;
+}
+
+#client-listings li.item img#keystone {
+  max-height: 18px;
+}
+
+#client-listings li.item img#mta {
+  max-height: 35px;
+}
+
+#client-listings li.item img#ny-state {
+  max-height: 50px;
+}
+
+#client-listings li.item img#newswhip {
+  max-height: 35px;
+}
+
+#client-listings li.item img#ordergroove {
+  max-height: 23px;
+}
+
+#client-listings li.item img#robin {
+  max-height: 50px;
+}
+
+#client-listings li.item img#salespad {
+  max-height: 50px;
+}
+
+#client-listings li.item img#sodexo {
+  max-height: 30px;
+}
+
+#client-listings li.item img#springer-nature {
+  max-height: 35px;
+}
+
+#client-listings li.item img#stensul {
+  max-height: 22px;
+}
+
+#client-listings li.item img#the-mom-project {
+  max-height: 15px;
+}
+
+#client-listings li.item img#the-muse {
+  max-height: 55px;
+}
+
+#client-listings li.item img#viacomcbs {
+  max-height: 18px;
+}
+
+#client-listings li.item img#wix {
+  max-height: 20px;
+}
+
+#client-listings li.item img#vchief {
+  max-height: 35px;
 }
 
 /* Sidebar */

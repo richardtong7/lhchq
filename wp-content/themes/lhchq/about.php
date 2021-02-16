@@ -74,7 +74,7 @@
             <?php } else { ?>
               <div class="photo missing flex-container"><?php echo explode(" ", $name)[0]; ?></div>
 
-              <?php if ($name) && ($muted) { ?>
+              <?php if ($name && $muted) { ?>
                 <div class="name">
                   <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted" style="margin-right: 0;"/>
                 </div>

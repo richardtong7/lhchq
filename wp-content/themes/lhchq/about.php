@@ -52,23 +52,35 @@
         $bio = get_sub_field('bio');
         $index = get_row_index();
         $muted = rand(0,1) == 1;
+
         ?>
         <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 team-member-container <?php if ($index == 6) { echo 'selected';} ?>">
           <div class="team-member text-center">
+
             <?php if ( $photo ) { ?>
               <div class="photo">
                 <img src="<?php echo $photo['url']; ?>" alt="<?php echo $name; ?>"/>
               </div>
+
+              <?php if ($name) { ?>
+                <div class="name">
+                  <?php if ($muted) { ?>
+                    <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted"/>
+                  <?php } ?>
+                  <?php echo $name; ?>
+                </div>
+              <?php } ?>
+
             <?php } else { ?>
-              <div class="photo"></div>
-            <?php } ?>
-            <?php if ($name) { ?>
-              <div class="name">
-                <?php if ($muted) { ?>
-                  <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted"/>
-                <?php } ?>
-                <?php echo $name; ?>
-              </div>
+              <div class="photo missing flex-container"><?php echo explode(" ", $name)[0]; ?></div>
+
+              <?php if ($name) { ?>
+                <div class="name">
+                  <?php if ($muted) { ?>
+                    <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted"/>
+                  <?php } ?>
+                </div>
+              <?php } ?>
             <?php } ?>
 
             <?php if ($title) { ?>

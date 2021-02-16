@@ -514,131 +514,146 @@ h2 {
 
 /* Newsletter / Clients  */
 
-#newsletter-listings li.item, #client-listings li.item {
+#newsletter-listings li.item, #client-list li.item {
   font-size: 100px;
   font-family: "Canela", serif;
   line-height: 100px;
   font-weight: 300;
+  color: #AAAAAA;
 }
 
-#client-listings li.item img {
+#clients #client-grid h1 {
+  margin-bottom: 50px;
+}
+
+#clients .client {
+  text-align: center;
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+#clients .client img {
+  max-height: 27px;
+}
+
+#client-list li.item img {
   max-height: 27px;
   float: right;
 }
 
-#client-listings li.item {
+#client-list li.item {
   justify-content: space-between;
 }
 
-#client-listings li.item img#alexa-fund {
+#clients img#alexa-fund {
   max-height: 23px;
 }
 
-#client-listings li.item img#andela {
+#clients img#andela {
   max-height: 35px;
 }
 
-#client-listings li.item img#ceros {
+#clients img#ceros {
   max-height: 20px;
 }
 
-#client-listings li.item img#cloudera {
+#clients img#cloudera {
   max-height: 18px;
 }
 
-#client-listings li.item img#comcast {
+#clients img#comcast {
   max-height: 35px;
 }
 
-#client-listings li.item img#digital-asset {
+#clients img#digital-asset {
   max-height: 25px;
 }
 
-#client-listings li.item img#facebook {
+#clients img#facebook {
   max-height: 15px;
 }
 
-#client-listings li.item img#foleon {
+#clients img#foleon {
   max-height: 30px;
 }
 
-#client-listings li.item img#gumgum {
+#clients img#gumgum {
   max-height: 35px;
 }
 
-#client-listings li.item img#hcl {
+#clients img#hcl {
   max-height: 15px;
 }
 
-#client-listings li.item img#himss {
+#clients img#himss {
   max-height: 40px;
 }
 
-#client-listings li.item img#harvard-business-school {
+#clients img#harvard-business-school {
   max-height: 40px;
 }
 
-#client-listings li.item img#hyperscience {
+#clients img#hyperscience {
   max-height: 35px;
 }
 
-#client-listings li.item img#keystone {
+#clients img#keystone {
   max-height: 18px;
 }
 
-#client-listings li.item img#mta {
+#clients img#mta {
   max-height: 35px;
 }
 
-#client-listings li.item img#ny-state {
+#clients img#ny-state {
   max-height: 50px;
 }
 
-#client-listings li.item img#newswhip {
+#clients img#newswhip {
   max-height: 35px;
 }
 
-#client-listings li.item img#ordergroove {
+#clients img#ordergroove {
   max-height: 23px;
 }
 
-#client-listings li.item img#robin {
+#clients img#robin {
   max-height: 50px;
 }
 
-#client-listings li.item img#salespad {
+#clients img#salespad {
   max-height: 50px;
 }
 
-#client-listings li.item img#sodexo {
+#clients img#sodexo {
   max-height: 30px;
 }
 
-#client-listings li.item img#springer-nature {
+#clients img#springer-nature {
   max-height: 35px;
 }
 
-#client-listings li.item img#stensul {
+#clients img#stensul {
   max-height: 22px;
 }
 
-#client-listings li.item img#the-mom-project {
+#clients img#the-mom-project {
   max-height: 15px;
 }
 
-#client-listings li.item img#the-muse {
+#clients img#the-muse {
   max-height: 55px;
 }
 
-#client-listings li.item img#viacomcbs {
+#clients img#viacomcbs {
   max-height: 18px;
 }
 
-#client-listings li.item img#wix {
+#clients img#wix {
   max-height: 20px;
 }
 
-#client-listings li.item img#vchief {
+#clients img#vchief {
   max-height: 35px;
 }
 

@@ -17,6 +17,9 @@
       </div>
     </div>
   </div>
+
+  <div id="scroll-notice">scroll to learn more</div>
+
 </div>
 
 <div id="team-member-detail">
@@ -83,22 +86,9 @@
   </div>
 </div>
 
-<div class="container slide flex-container left-align">
+<div class="container slide flex-container left-align" id="map" style="background:url('https://lhchq.s3.amazonaws.com/map_v2.png') no-repeat; background-size: 90%; background-position: 150% center !important;">
   <div class="row">
     <div class="col-12">
-      <div class="statement">
-        We are very good at executing on just about any kind of content; and we do so with a very small and very senior team that's been on both the vendor and brand sides — which allows us both to understand the issues facing our clients and avoid a lot of ypical agency overhead. Fast, cheap, good — choose 3.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container slide black flex-container left-align">
-  <div class="row">
-    <div class="col-12">
-      <div class="statement">
-        map goes here
-      </div>
     </div>
   </div>
 </div>

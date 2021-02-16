@@ -264,3 +264,16 @@
   text-transform: uppercase;
   color: #888888;
 }
+
+
+#newsletter-text {
+  padding-bottom: 100px;
+}
+
+#newsletter-listings li {
+  list-style-type: none;
+}
+
+#whats-next {
+  padding-bottom: 200px;
+}

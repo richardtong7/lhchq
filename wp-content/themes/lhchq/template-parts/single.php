@@ -29,8 +29,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="col-7" id="newsletter-text">
 			<?php echo get_the_content(); ?>
 		</div>
-		<div class="col-1"></div>
-		<div class="col-4" id="sidebar">
+		<div class="col-2"></div>
+		<div class="col-3" id="sidebar">
 
 
 			<?php if (have_rows('job')): ?>
@@ -84,13 +84,55 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$quote = get_field('quote');
 				$source = get_field('source');
 			?>
-
-
 		</div>
-
 	</div>
 
+	<div class="row" id="whats-next">
+    <div class="col-12">
+			<?php
+				$prev_post = get_previous_post();
+
+				$ppp = 200;
+				$all_posts = new WP_Query( array(
+					'post_type' => 'post',
+					'post_status' => 'publish',
+					'posts_per_page' => $ppp,
+					'orderby' => 'date',
+					'order' => 'DESC'
+					)
+				);
+				$total_post_count = $all_posts->found_posts;
+				$array_of_indexed_posts = array();
+
+				if ( $all_posts->have_posts() ) { ?>
+					<?php
+					while ( $all_posts->have_posts() ) : $all_posts->the_post();
+						$index = $total_post_count - ($all_posts->current_post);
+						$post_id = get_the_ID();
+						$array_of_indexed_posts[$post_id] = $index;
+						?>
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+				<?php }
+
+				if ( ! empty( $prev_post ) ) {
+					$prev_post_id = $prev_post->ID;
+					$prev_post_index = $array_of_indexed_posts[$prev_post_id]; ?>
+					<h1 class="sans">Previously.</h1>
+					<div class="description small" id="newsletter-listings">
+						<ul>
+							<li class="item">
+								<a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo $prev_post_index; ?>. <?php echo get_the_title( $prev_post->ID ); ?></a>
+							</li>
+						</ul>
+					</div>
+				<?php } ?>
+    </div>
+  </div>
+
 </div>
+
+
 
 
 	<?php

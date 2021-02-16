@@ -47,7 +47,7 @@
 <div id="main-container" class="flex-container">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12" id="lp-container" style="opacity: 0.0; position: relative; right: -20px;">
+      <div class="col-12" id="lp-container">
         <h1>LighthouseCreative.</h1>
 
         <!-- https://s3.console.aws.amazon.com/s3/object/lhchq?region=us-east-1&prefix=brooklyn.mp4 -->
@@ -79,42 +79,3 @@
 </div>
 
 <?php get_footer();?>
-
-<script type="text/javascript">
-  $(function(){
-    resizeText();
-  })
-
-  $(window).on("resize", function(){
-    resizeText();
-  })
-
-  function resizeText() {
-
-    var window_width = $(window).width()
-    var headline_width = $("#lp-container h1").width();
-    var new_width = window_width - 60;
-    var headline_font_size = $("#lp-container h1").css("font-size").replace("px","");
-    var headline_font_size = parseInt(headline_font_size);
-    var new_font_size = parseInt(new_width * headline_font_size / headline_width);
-    var new_letter_spacing = parseInt(new_font_size / 20);
-
-    $("#lp-container h1").css({
-      'font-size'     : new_font_size + "px",
-      'line-height'   : new_font_size + "px",
-      'letter-spacing': "-" + new_letter_spacing + "px"
-    });
-
-    $("#lp-container ul li").css({
-      'font-size'     : new_font_size + "px",
-      'line-height'   : new_font_size + "px"
-    });
-
-    $("#lp-container").delay(200).animate({
-      opacity: 1.0,
-      right: 0
-    }, 700);
-
-  }
-
-</script>

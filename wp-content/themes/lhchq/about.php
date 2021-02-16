@@ -221,6 +221,8 @@
         opacity: 1.0,
         left: "0"
       }, 400)
+
+      $("#team-member-detail #photo-container").css("opacity", "1.0");
       $("#team-member-detail #photo-container img").animate({
         opacity: 1.0,
         left: "0"

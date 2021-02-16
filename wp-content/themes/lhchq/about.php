@@ -74,9 +74,12 @@
             <?php } else { ?>
               <div class="photo missing flex-container"><?php echo explode(" ", $name)[0]; ?></div>
 
-              <?php if ($name && $muted) { ?>
+              <?php if ($name) { ?>
                 <div class="name">
-                  <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted" style="margin-right: 0;"/>
+                  <?php if ($muted) { ?>
+                    <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted" style="margin-right: 0;"/>
+                  <?php } ?>
+                  <span style="display: none;"><?php echo $name; ?></span>
                 </div>
               <?php } ?>
             <?php } ?>
@@ -161,7 +164,7 @@
           scrollTop: $(e.target).next().offset().top
         }, 400);
       }
-    } else if (e.target.parentElement.className == "photo") {
+    } else if ($(e.target.parentElement).hasClass("photo") || $(e.target).hasClass("photo")) {
       var elem = $(e.target.parentElement.parentElement);
       var name = elem.find(".name").text().trim(),
           title = elem.find(".title").text().trim(),
@@ -171,13 +174,18 @@
       $("#team-member-detail #detail-title").text(title);
       $("#team-member-detail #detail-name").text(name);
       $("#team-member-detail #detail-bio").text(bio);
-      $("#team-member-detail #photo-container").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
+
+      if (photo == undefined) {
+        $("#team-member-detail #photo-container").html("");
+      } else {
+        $("#team-member-detail #photo-container").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
+      }
+
 
       $("#team-member-detail").fadeIn(200);
       animateName();
 
-    } else if (!team_member_detail.is(e.target) && team_member_detail.has(e.target).length === 0)
-    {
+    } else if (!team_member_detail.is(e.target) && team_member_detail.has(e.target).length === 0) {
       $("#team-member-detail").fadeOut(200);
       resetName();
     }

@@ -73,8 +73,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<h5>What We're Listening To</h5>
 
 					<div class="item album">
-						<img src="<?php echo $cover_art['url']; ?>" class="album-art"/>
-						<div class="clear"></div>
+						<?php if ($cover_art) { ?>
+							<img src="<?php echo $cover_art['url']; ?>" class="album-art"/>
+							<div class="clear"></div>
+						<?php } ?>
+
 						<label><a href="<?php echo $playlist_link; ?>"><?php echo $playlist_name; ?></a></label>
 						<div class="album-description small-description" style="float: left;"><?php echo $playlist_description; ?></div>
 					</div>

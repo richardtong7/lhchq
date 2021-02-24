@@ -68,21 +68,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$playlist_link = get_field('song__album__playlist_link');
 				$playlist_description = get_field('song__album__playlist_description'); ?>
 
-			<?php if ($playlist_name) { ?>
+			<?php if ($playlist_name || $playlist_description) { ?>
 				<div class="sidebar-section" id="things-are-happening">
 					<h5>What We're Listening To</h5>
 
 					<div class="item album">
 						<img src="<?php echo $cover_art['url']; ?>" class="album-art"/>
+						<div class="clear"></div>
 						<label><a href="<?php echo $playlist_link; ?>"><?php echo $playlist_name; ?></a></label>
 						<div class="album-description small-description" style="float: left;"><?php echo $playlist_description; ?></div>
 					</div>
+					<div class="clear"></div>
 				</div>
 			<?php } ?>
 
 			<?php
 				$quote = get_field('quote');
 				$source = get_field('source');
+				$source_url = get_field('source_url');
+
+				if ($quote) { ?>
+					<div class="sidebar-section" id="quote-of-the-day">
+						<h5>Quote of the Day</h5>
+						<div class="item">
+							<div class="quote">"<?php echo $quote; ?>"</div>
+							<?php if ($source_url) { ?>
+								<div class="source">- <a href="<?php echo $source_url; ?>"><?php echo $source; ?></a></div>
+							<?php } else { ?>
+								<div class="source">- <?php echo $source; ?></div>
+							<?php } ?>
+
+						</div>
+					</div>
+				<?php }
 			?>
 		</div>
 	</div>

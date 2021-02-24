@@ -221,8 +221,10 @@ h2 {
 }
 
 .lead-container .description p {
-  font-size: 84px;
-  line-height: 84px;
+  /* font-size: 84px; */
+  /* line-height: 84px; */
+  font-size: 60px;
+  line-height: 60px;
   color: #AAAAAA;
   font-family: "Canela", serif;
   font-weight: 300;
@@ -295,6 +297,10 @@ h2 {
 
 #newsletter-text p {
   margin-bottom: 20px;
+}
+
+#newsletter-text p strong {
+  font-weight: bold;
 }
 
 #newsletter-text a {
@@ -676,25 +682,31 @@ h2 {
   clear: both;
   display: block;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-#sidebar h5:after {
+#sidebar h5:before {
   content: '';
   width: 40px;
   height: 1px;
   background: #dddddd;
   display: block;
-  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 #sidebar .item {
   margin-bottom: 30px;
 }
 
-#sidebar .item img {
+#sidebar img {
   max-width: 200px;
   margin-top: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02),
+              0 2px 4px rgba(0,0,0,0.02),
+              0 4px 8px rgba(0,0,0,0.02),
+              0 8px 16px rgba(0,0,0,0.02),
+              0 16px 32px rgba(0,0,0,0.02),
+              0 32px 64px rgba(0,0,0,0.02);
 }
 
 #sidebar .item label {
@@ -733,7 +745,7 @@ h2 {
 #sidebar img.album-art {
   margin-bottom: 15px;
   margin-right: 15px;
-  width: 75px;
+  height: 75px;
   float: left;
 }
 
@@ -744,4 +756,14 @@ h2 {
 
 #sidebar .item a:hover {
   color: #ff2a6e;
+}
+
+#sidebar .item .quote {
+  font-size: 18px;
+  margin-top: -10px;
+}
+
+#sidebar .item .source {
+  font-size: 14px;
+  margin-top: 15px;
 }

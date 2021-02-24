@@ -311,8 +311,18 @@ h2 {
   color: #ff2a6e;
 }
 
-#newsletter-text img {
+#newsletter-text figure {
   margin: 50px 30px 60px 0;
+}
+
+#newsletter-text figure figcaption {
+  font-size: 14px;
+  color: #888888;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+#newsletter-text img {
   display: block;
   max-width: 500px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.02),

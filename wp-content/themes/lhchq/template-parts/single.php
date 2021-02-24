@@ -74,7 +74,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<div class="item album">
 						<?php if ($cover_art) { ?>
-							<img src="<?php echo $cover_art['url']; ?>" class="album-art"/>
+							<?php if ($playlist_link) { ?>
+								<a href="<?php echo $playlist_link; ?>"><img src="<?php echo $cover_art['url']; ?>" class="album-art"/></a>
+							<?php } else { ?>
+								<img src="<?php echo $cover_art['url']; ?>" class="album-art"/>
+							<?php } ?>
 							<div class="clear"></div>
 						<?php } ?>
 

@@ -21,11 +21,17 @@
     <?php if (have_rows('category_of_services')): ?>
       <?php while (have_rows('category_of_services')): the_row();
         $icon = get_sub_field('icon');
+        $icon_hover = get_sub_field('icon_hover');
         $label = get_sub_field('category_label');
         $link = get_sub_field('link');
         ?>
         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 service">
-          <img src="<?php echo $icon['url']; ?>"/>
+          <div class="icon-container">
+            <a href="<?php echo $link; ?>"><img src="<?php echo $icon['url']; ?>" class="default"/></a>
+            <a href="<?php echo $link; ?>"><img src="<?php echo $icon_hover['url']; ?>" class="hover"/></a>
+          </div>
+          <div class="clear"></div>
+
           <h3><a href="<?php echo $link; ?>"><?php echo $label; ?></a></h3>
           <ul>
             <?php if (have_rows('service')): ?>

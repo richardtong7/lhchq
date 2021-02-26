@@ -242,10 +242,31 @@
 }
 
 #services .service img {
-  max-width: 75px;
-  max-height: 60px;
+  max-height: 100px;
   margin-bottom: 25px;
+  margin-left: -10px;
 }
+
+#services .service .icon-container {
+  float: left;
+}
+
+#services .service .icon-container img.default {
+  display: block;
+}
+
+#services .service .icon-container img.hover {
+  display: none;
+}
+
+#services .service .icon-container:hover img.default {
+  display: none;
+}
+
+#services .service .icon-container:hover img.hover {
+  display: block;
+}
+
 
 #services .service h3 {
   font-family: "Canela", serif;

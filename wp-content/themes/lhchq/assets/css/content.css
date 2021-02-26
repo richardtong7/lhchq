@@ -236,6 +236,10 @@
   line-height: 48px;
 }
 
+.details h2 {
+  margin-bottom: 20px;
+}
+
 
 #services .service {
   margin-bottom: 100px;
@@ -290,6 +294,41 @@
   line-height: 23px;
   text-transform: uppercase;
   color: #888888;
+}
+
+
+.services-description {
+  font-size: 24px;
+  line-height: 36px;
+  color: #aaaaaa;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+  padding-right: 100px;
+}
+
+
+.services-description h2 {
+  font-size: 60px;
+  line-height: 60px;
+  color: #AAAAAA;
+  font-family: "Canela", serif;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+
+#team-lead {
+  line-height: 21px;
+  margin-top: 15px;
+}
+
+#team-lead .name {
+  font-weight: bold;
+}
+
+#team-lead label {
+  font-size: 14px;
+  color: #aaaaaa;
 }
 
 

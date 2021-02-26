@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
       <h1 class="sans"><?php echo get_the_title(); ?>.</h1>
-      <div class="description small">
+      <div class="services-description">
         <?php echo get_the_content(); ?>
       </div>
     </div>

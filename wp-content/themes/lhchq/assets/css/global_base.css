@@ -66,6 +66,9 @@
 
 .clear {
   clear: both;
+  width: 100%;
+  display: block;
+  height: 1px;
 }
 
 .flex-container {
@@ -163,7 +166,6 @@ a:hover {
   font-weight: 300;
 }
 
-
 h1 {
   font-size: 100px;
   line-height: 100px;
@@ -221,8 +223,6 @@ h2 {
 }
 
 .lead-container .description p {
-  /* font-size: 84px; */
-  /* line-height: 84px; */
   font-size: 60px;
   line-height: 60px;
   color: #AAAAAA;

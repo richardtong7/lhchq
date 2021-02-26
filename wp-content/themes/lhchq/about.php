@@ -2,6 +2,11 @@
 /**
 * Template Name: About
 **/
+
+
+$description = get_field('description');
+$map = get_field('map');
+
 ?>
 <?php get_header();?>
 
@@ -11,11 +16,13 @@
       <div class="eyebrow">About</div>
       <h1 class="serif">Lighthouse Creative is a <br/><span>full-stack</span> content agency.</h1>
     </div>
-    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-      <div class="description lead">
-        <p>Lighthouse creative was founded on in 2017 with the belief that all content should be good content. We work with some of the most influential companies on the planet to make sure everything they do — from social media stories to sales decks to TV spots — looks, sounds, and feels like a million bucks (even if it costs less).</p>
+    <?php if ($description) { ?>
+      <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+        <div class="description lead">
+          <?php echo $description; ?>
+        </div>
       </div>
-    </div>
+    <?php } ?>
   </div>
 
   <div id="scroll-notice">scroll to learn more</div>
@@ -99,12 +106,14 @@
   </div>
 </div>
 
-<div class="container slide flex-container left-align" id="map" style="background:url('https://lhchq.s3.amazonaws.com/map_v2.png') no-repeat; background-size: 90%; background-position: 150% center !important;">
-  <div class="row">
-    <div class="col-12">
+<?php if ($map) { ?>
+  <div class="container slide flex-container left-align" id="map" style="background:url('<?php echo $map["url"]; ?>') no-repeat; background-size: cover !important; background-position: center center !important;">
+    <div class="row">
+      <div class="col-12">
+      </div>
     </div>
   </div>
-</div>
+<?php } ?>
 
 <div class="container slide flex-container left-align">
   <div class="row">
@@ -112,13 +121,24 @@
       <div class="inner-container">
         <div class="eyebrow">Work With Us</div>
         <h2>Open roles.</h2>
-        <div class="details">
-          <div class="item"><a href="">Sr. Content Strategist</a></div>
-          <div class="item"><a href="">Director, Social Media</a></div>
-          <div class="item"><a href="">Senior Editor</a></div>
-          <div class="item"><a href="">Social Strategist</a></div>
-          <div class="item"><a href="">Paid Media Specialist</a></div>
-        </div>
+        <?php if (have_rows('role')) { ?>
+          <div class="details">
+          <?php while (have_rows('role')): the_row();
+            $job_title = get_sub_field('job_title');
+            $url = get_sub_field('url');
+            ?>
+            <div class="item">
+              <?php if ($url) { ?>
+                <a href="<?php echo $url; ?>"><?php echo $job_title; ?></a>
+              <?php } else { ?>
+                <?php echo $job_title; ?>
+              <?php } ?>
+            </div>
+          <?php endwhile; ?>
+          </div>
+        <?php } else { ?>
+          <!-- no open roles -->
+        <?php } ?>
       </div>
 
     </div>
@@ -126,22 +146,19 @@
 </div>
 
 <div class="container slide inverse black flex-container left-align" style="background: url('https://live.staticflickr.com/65535/50803867588_a2c642805a_h.jpg') no-repeat; background-size: cover !important; background-position: center center">
-  <div class="row">
+  <div class="row details">
     <div class="col-12">
       <div class="eyebrow">Work With Us</div>
       <h2>Benefits.</h2>
     </div>
-    <div class="col-5 details">
-      <div class="item small">4 day work week / 401k</div>
-      <div class="item small">Health insurance</div>
-      <div class="item small">Snacks (delivered 2 yr home)</div>
-      <div class="item small">Quarterly profit-sharing</div>
-    </div>
-    <div class="col-7 details">
-      <div class="item small">Employee-owned company</div>
-      <div class="item small">Dogs and kids encouraged in meetings</div>
-      <div class="item small">Sick merch</div>
-    </div>
+    <div class="clear"></div>
+    <div class="item small col-6">4 day work week / 401k</div>
+    <div class="item small col-6">Health insurance</div>
+    <div class="item small col-6">Snacks (delivered 2 yr home)</div>
+    <div class="item small col-6">Quarterly profit-sharing</div>
+    <div class="item small col-6">Employee-owned company</div>
+    <div class="item small col-6">Dogs and kids encouraged in meetings</div>
+    <div class="item small col-6">Sick merch</div>
   </div>
 </div>
 

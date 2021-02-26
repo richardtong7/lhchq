@@ -548,13 +548,15 @@ h2 {
   margin-bottom: 30px;
 }
 
-#clients .client img {
-  max-height: 27px;
-}
-
 #client-list li.item img {
   max-height: 27px;
   float: right;
+  opacity: 0.0;
+  transition: 0.2s;
+}
+
+#client-list li.item:hover img {
+  opacity: 1.0;
 }
 
 #client-list li.item {

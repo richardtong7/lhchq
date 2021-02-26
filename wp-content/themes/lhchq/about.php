@@ -152,13 +152,16 @@ $map = get_field('map');
       <h2>Benefits.</h2>
     </div>
     <div class="clear"></div>
-    <div class="item small col-6">4 day work week / 401k</div>
-    <div class="item small col-6">Health insurance</div>
-    <div class="item small col-6">Snacks (delivered 2 yr home)</div>
-    <div class="item small col-6">Quarterly profit-sharing</div>
-    <div class="item small col-6">Employee-owned company</div>
-    <div class="item small col-6">Dogs and kids encouraged in meetings</div>
-    <div class="item small col-6">Sick merch</div>
+
+    <?php if (have_rows('benefit')) { ?>
+      <?php while (have_rows('benefit')): the_row();
+        $name_of_benefit = get_sub_field('name_of_benefit');
+        ?>
+        <div class="item small col-6">
+          <?php echo $name_of_benefit; ?>
+        </div>
+      <?php endwhile; ?>
+    <?php } ?>
   </div>
 </div>
 
@@ -171,11 +174,6 @@ $map = get_field('map');
 
     if ($(e.target).hasClass("slide")) {
       var element = $(e.target).next();
-      if (element.hasClass("inverse")) {
-        $(".site-header").addClass("inverse")
-      } else {
-        $(".site-header").removeClass("inverse")
-      }
       if (element.length != 0) {
         $('html, body').animate({
           scrollTop: $(e.target).next().offset().top

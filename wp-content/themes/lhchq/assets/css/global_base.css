@@ -464,6 +464,7 @@ h2 {
   color: #aaaaaa;
   font-weight: bold;
   letter-spacing: 1px;
+  max-width: 300px;
 }
 
 #case-study-stats #deliverables .deliverable {
@@ -479,6 +480,13 @@ h2 {
   margin-right: 15px;
   margin-top: 7px;
   font-size: 12px;
+}
+
+#case-study-stats #deliverables .deliverable .deliverable-description {
+  display: inline-block;
+  width: 90%;
+  float: left;
+  max-width: 300px;
 }
 
 #more-case-studies {

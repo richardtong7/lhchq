@@ -26,6 +26,11 @@
   margin-top: -6px;
 }
 
+.site-header #header-logos img.ceros {
+  margin-top: -2px;
+  height: 20px;
+}
+
 .site-header #header-logos img.case-study-logo {
   margin-right: 30px;
   max-height: 30px

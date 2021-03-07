@@ -37,7 +37,7 @@ get_header();
 
 <div class="container-fluid container-lhc" id="background-statement">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-10 col-centered">
 			<?php echo $background_info ?>
 		</div>
 	</div>

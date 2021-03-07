@@ -384,13 +384,26 @@ h2 {
   object-fit: cover !important;
 }
 
-#case-study-text p {
+#case-study-text p, #case-study-text ul {
   font-size: 24px;
   line-height: 36px;
   margin-bottom: 50px;
 }
 
+#case-study-text ul {
+  margin-left: 50px;
+}
+
+#case-study-text ul li {
+  list-style-type: disc;
+  margin-bottom: 25px;
+}
+
 #case-study-text p strong {
+  font-weight: bold;
+}
+
+#case-study-text ul li strong {
   font-weight: bold;
 }
 

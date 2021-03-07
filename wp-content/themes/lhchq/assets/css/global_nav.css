@@ -22,6 +22,10 @@
   margin-top: 7px;
 }
 
+.site-header #header-logos img.amazon-pay {
+  margin-top: -6px;
+}
+
 .site-header #header-logos img.case-study-logo {
   margin-right: 30px;
   max-height: 30px

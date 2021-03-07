@@ -45,6 +45,13 @@
 .site-header #header-logos img.ibm {
   max-height: 40px;
   height: 40px;
+  margin-top: -3px;
+}
+
+
+.site-header #header-logos img.keystone {
+  max-height: 15px;
+  height: 15px;
   margin-top: -2px;
 }
 

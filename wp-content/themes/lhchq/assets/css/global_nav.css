@@ -39,6 +39,7 @@
 .site-header #header-logos img.himss {
   max-height: 40px;
   height: 40px;
+  margin-top: -2px;
 }
 
 .site-header #header-logos img.case-study-logo.white {

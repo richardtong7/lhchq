@@ -37,7 +37,7 @@ if (strpos($request_url, 'localhost') !== false) {
 				</button>
 
 				<!-- Logo -->
-				<div id="header-logos">
+				<div id="header-logos" class="flex-container">
 
 					<?php if ($post_type == "case-study") {
 						$client_logo_white = get_field('client_logo_white');

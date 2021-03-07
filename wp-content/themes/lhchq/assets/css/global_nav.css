@@ -19,9 +19,12 @@
 
 .site-header #header-logos img.amazon-pay {
   height: 20px;
-  position: absolute;
-  top: 5px;
-  right: 70px;
+  margin-top: 7px;
+}
+
+.site-header #header-logos img.case-study-logo {
+  margin-right: 30px;
+  max-height: 30px
 }
 
 .site-header #header-logos img.case-study-logo.white {

@@ -142,12 +142,12 @@ get_header();
 	    if ($(this).scrollTop() >= hero ){
 				$(".site-header").removeClass("inverse");
 				$("#header-logos .case-study-logo.white").hide();
-				$("#header-logos .case-study-logo.color").show();
+				$("#header-logos .case-study-logo.color").css("display","flex");
 				$("#header-logos img#lhc").removeClass("white");
 	    } else {
 				$(".site-header").addClass("inverse");
 				$("#header-logos .case-study-logo.color").hide();
-				$("#header-logos .case-study-logo.white").show();
+				$("#header-logos .case-study-logo.white").css("display","flex");
 				$("#header-logos img#lhc").addClass("white");
 			}
 	  });

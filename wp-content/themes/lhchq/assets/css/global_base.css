@@ -470,6 +470,10 @@ h2 {
 #case-study-stats #deliverables .deliverable {
   font-size: 14px;
   line-height: 24px;
+  clear: both;
+  float: left;
+  width: 100%;
+  display: block;
 }
 
 #case-study-stats #deliverables .deliverable label {

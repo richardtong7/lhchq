@@ -48,11 +48,15 @@
   margin-top: -3px;
 }
 
-
 .site-header #header-logos img.keystone {
   max-height: 15px;
   height: 15px;
   margin-top: -2px;
+}
+
+.site-header #header-logos img.nys-office-of-rent-administration {
+  max-height: 50px;
+  height: 50px;
 }
 
 .site-header #header-logos img.case-study-logo.white {

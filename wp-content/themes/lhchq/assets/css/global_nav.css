@@ -179,3 +179,79 @@
   z-index: 900;
   display: none;
 }
+
+
+/* Mailchimp */
+
+#mailchimp-signup {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+  background: #f8f8f8;
+}
+
+#mc_embed_signup {
+  padding: 80px 45px 50px 45px;
+}
+
+#mc_embed_signup label {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "Canela", serif;
+  font-weight: 300;
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#mc_embed_signup input[type=email] {
+  max-width: 300px;
+  float: left;
+  border-radius: 0;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+}
+
+#mc_embed_signup input[type=submit] {
+  color: #ffffff;
+  background: #060606;
+  border: 1px solid #060606;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-left: 3px
+}
+
+#mc_embed_signup input[type=submit]:hover {
+  background: #ff2a6e;
+  border: 1px solid #ff2a6e;
+}
+
+#newsletter-testimonial {
+  text-align: right;
+  padding-top: 100px;
+  padding-right: 55px;
+}
+
+#newsletter-testimonial .testimonial {
+  font-size: 21px;
+  line-height: 27px;
+  font-family: "Canela", serif;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+#newsletter-testimonial .source {
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  clear: both;
+  display: block;
+  margin-bottom: 20px;
+}

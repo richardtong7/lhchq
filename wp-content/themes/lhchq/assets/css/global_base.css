@@ -205,6 +205,11 @@ h2 {
   padding-bottom: 20px;
 }
 
+.lead-container.newsletter-container.solo {
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
 .description p a {
   color: #060606;
   font-weight: bold;

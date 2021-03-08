@@ -345,5 +345,17 @@
 }
 
 #whats-next {
+  padding-top: 75px;
   padding-bottom: 200px;
+}
+
+#whats-next h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#whats-next li.item a {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Canela", serif;
 }

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	$post_type = get_post_type();
 ?>
 
-<div class="container-fluid container-lhc lead-container newsletter-container">
+<div class="container-fluid container-lhc lead-container newsletter-container solo">
   <div class="row">
     <div class="col-12">
       <h1 class="sans"><?php echo get_the_title(); ?>.</h1>
@@ -113,46 +113,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 	<div class="row" id="whats-next">
-    <div class="col-12">
-			<?php
-				$prev_post = get_previous_post();
 
-				$ppp = 200;
-				$all_posts = new WP_Query( array(
-					'post_type' => 'post',
-					'post_status' => 'publish',
-					'posts_per_page' => $ppp,
-					'orderby' => 'date',
-					'order' => 'DESC'
-					)
-				);
-				$total_post_count = $all_posts->found_posts;
-				$array_of_indexed_posts = array();
+		<?php
+			$prev_post = get_previous_post();
+			$next_post = get_next_post();
 
-				if ( $all_posts->have_posts() ) { ?>
-					<?php
-					while ( $all_posts->have_posts() ) : $all_posts->the_post();
-						$index = $total_post_count - ($all_posts->current_post);
-						$post_id = get_the_ID();
-						$array_of_indexed_posts[$post_id] = $index;
-						?>
-					<?php endwhile;
-					wp_reset_postdata(); ?>
-				<?php }
+			$ppp = 200;
+			$all_posts = new WP_Query( array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'posts_per_page' => $ppp,
+				'orderby' => 'date',
+				'order' => 'DESC'
+				)
+			);
+			$total_post_count = $all_posts->found_posts;
+			$array_of_indexed_posts = array();
 
-				if ( ! empty( $prev_post ) ) {
-					$prev_post_id = $prev_post->ID;
-					$prev_post_index = $array_of_indexed_posts[$prev_post_id]; ?>
-					<h1 class="sans">Previously.</h1>
-					<div class="description small" id="newsletter-listings">
+			if ( $all_posts->have_posts() ) { ?>
+				<?php
+				while ( $all_posts->have_posts() ) : $all_posts->the_post();
+					$index = $total_post_count - ($all_posts->current_post);
+					$post_id = get_the_ID();
+					$array_of_indexed_posts[$post_id] = $index;
+					?>
+				<?php endwhile;
+				wp_reset_postdata(); ?>
+			<?php }
+
+			if ( ! empty( $prev_post ) ) {
+				$prev_post_id = $prev_post->ID;
+				$prev_post_index = $array_of_indexed_posts[$prev_post_id]; ?>
+				<div class="col-6" id="previous">
+					<h3 class="sans">Previously.</h1>
+					<div class="description small">
 						<ul>
 							<li class="item">
 								<a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo $prev_post_index; ?>. <?php echo get_the_title( $prev_post->ID ); ?></a>
 							</li>
 						</ul>
 					</div>
-				<?php } ?>
-    </div>
+				</div>
+			<?php } ?>
+
+			<?php if ( ! empty( $next_post ) ) {
+				$next_post_id = $next_post->ID;
+				$next_post_index = $array_of_indexed_posts[$next_post_id]; ?>
+				<div class="col-6 text-right" id="next">
+					<h3 class="sans">Next.</h1>
+					<div class="description small">
+						<ul>
+							<li class="item">
+								<a href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post_index; ?>. <?php echo get_the_title( $next_post->ID ); ?></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			<?php } ?>
+
   </div>
 
 </div>

@@ -59,13 +59,14 @@ $map = get_field('map');
         $bio = get_sub_field('bio');
         $index = get_row_index();
         $muted = rand(0,1) == 1;
+        $dog = get_sub_field('dog_or_human');
 
         ?>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 team-member-container <?php if ($index == 6) { echo 'selected';} ?>">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 team-member-container <?php if ($index == 6) { echo 'selected';} ?>  <?php if ($dog) { echo "dog"; } ?>">
           <div class="team-member text-center">
 
             <?php if ( $photo ) { ?>
-              <div class="photo">
+              <div class="photo <?php if ($dog) { echo "dog"; } ?>">
                 <img src="<?php echo $photo['url']; ?>" alt="<?php echo $name; ?>"/>
               </div>
 
@@ -79,7 +80,7 @@ $map = get_field('map');
               <?php } ?>
 
             <?php } else { ?>
-              <div class="photo missing flex-container"><?php echo explode(" ", $name)[0]; ?></div>
+              <div class="photo missing flex-container <?php if ($dog) { echo "dog"; } ?>"><?php echo explode(" ", $name)[0]; ?></div>
 
               <?php if ($name) { ?>
                 <div class="name">
@@ -169,6 +170,7 @@ $map = get_field('map');
 <?php get_footer();?>
 
 <script type="text/javascript">
+
   $(window).on("click", function(e) {
     var team_member_detail = $("#team-member-detail-inner");
 
@@ -180,25 +182,30 @@ $map = get_field('map');
         }, 400);
       }
     } else if ($(e.target.parentElement).hasClass("photo") || $(e.target).hasClass("photo")) {
-      var elem = $(e.target.parentElement.parentElement);
-      var name = elem.find(".name").text().trim(),
-          title = elem.find(".title").text().trim(),
-          bio = elem.find(".bio").text().trim(),
-          photo = elem.find(".photo img").attr("src");
 
-      $("#team-member-detail #detail-title").text(title);
-      $("#team-member-detail #detail-name").text(name);
-      $("#team-member-detail #detail-bio").text(bio);
+      if ($(e.target.parentElement).hasClass("dog") || $(e.target).hasClass("dog")) {
+        return false;
 
-      if (photo == undefined) {
-        $("#team-member-detail #photo-container").html("");
       } else {
-        $("#team-member-detail #photo-container").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
+        var elem = $(e.target.parentElement.parentElement);
+        var name = elem.find(".name").text().trim(),
+            title = elem.find(".title").text().trim(),
+            bio = elem.find(".bio").text().trim(),
+            photo = elem.find(".photo img").attr("src");
+
+        $("#team-member-detail #detail-title").text(title);
+        $("#team-member-detail #detail-name").text(name);
+        $("#team-member-detail #detail-bio").text(bio);
+
+        if (photo == undefined) {
+          $("#team-member-detail #photo-container").html("");
+        } else {
+          $("#team-member-detail #photo-container").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
+        }
+
+        $("#team-member-detail").fadeIn(200);
+        animateName();
       }
-
-
-      $("#team-member-detail").fadeIn(200);
-      animateName();
 
     } else if (!team_member_detail.is(e.target) && team_member_detail.has(e.target).length === 0) {
       $("#team-member-detail").fadeOut(200);

@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+#team-members .team-member-container.dog:hover {
+  cursor: auto;
+}
+
 #team-members .team-member-container .team-member {
   width: 100%;
   height: 200px;

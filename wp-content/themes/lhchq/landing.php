@@ -24,7 +24,7 @@
 
         <!-- Video -->
         <div id="vid-container">
-          <video autoplay playsinline muted loop preload poster="assets/oceanshot.jpg" style="margin-top: -750px;">
+          <video autoplay playsinline muted loop preload poster="assets/oceanshot.jpg" style="margin-top: -720px;">
             <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
           <svg viewBox="0 0 1000 60">

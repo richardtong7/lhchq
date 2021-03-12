@@ -15,16 +15,6 @@
   margin-top: -100px;
 }
 
-#lp-container h1 {
-  display: inline-block;
-  width: auto;
-  font-family: "Helvetica Neue", serif;
-  font-weight: bold;
-  font-size: 144px;
-  letter-spacing: -5px;
-  line-height: 144px;
-}
-
 #lp-container ul li {
   display: inline-block;
   width: auto;

@@ -281,6 +281,17 @@
   margin-left: -30px;
 }
 
+#vid-container h1 {
+  position: absolute;
+  z-index: 10000;
+  top: 15px;
+  left: 15px;
+  font-size: 106px;
+  font-weight: bold;
+  letter-spacing: -2.7px;
+  color: #060606;
+}
+
 svg {
   position: absolute;
   left: 0;

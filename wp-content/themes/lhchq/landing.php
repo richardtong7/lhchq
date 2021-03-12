@@ -20,12 +20,12 @@
   <div class="container-fluid collapse-padding-right">
     <div class="row">
       <div class="col-12" id="lp-container">
-        <!-- <h1>LighthouseCreative.</h1> -->
+
 
         <!-- Video -->
         <div id="vid-container">
           <video autoplay playsinline muted loop preload poster="assets/oceanshot.jpg" style="margin-top: -750px;">
-            <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn.mp4" />
+            <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
           <svg viewBox="0 0 1000 60">
             <g class="header-backdrop" mask="url(#header-mask)">

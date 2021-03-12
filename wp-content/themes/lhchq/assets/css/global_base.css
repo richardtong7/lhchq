@@ -60,6 +60,10 @@
   padding-right: 0;
 }
 
+.collapse-padding-right {
+  padding-right: 0;
+}
+
 .col-centered {
   margin: 0px auto;
 }

@@ -255,3 +255,40 @@
   display: block;
   margin-bottom: 20px;
 }
+
+.heading-text {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1.3px;
+}
+
+.transparent-text {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-opacity: 0;
+}
+
+.header-backdrop {
+  fill: #ffffff;
+}
+
+#vid-container {
+  width: calc(100% + 30px);
+  height: 210px;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  margin-left: -30px;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.menu-nav-container {
+  position: relative;
+  z-index: 99999;
+}

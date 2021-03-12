@@ -1,0 +1,126 @@
+@media (max-width: 1440px) {
+  #vid-container {
+    width: calc(100% + 15px);
+    height: 130px;
+    margin-left: -15px;
+  }
+  .heading-text {
+    font-size: 48px !important;
+    letter-spacing: -0.75px;
+  }
+
+  #lp-container ul li {
+    font-size: 96px;
+    line-height: 108px;
+  }
+}
+
+@media (max-width: 1180px) {
+  #vid-container {
+    height: 110px;
+    margin-left: -15px;
+    width: calc(100% + 15px);
+  }
+  .heading-text {
+    font-size: 48px !important;
+    letter-spacing: -0.5px;
+  }
+
+  #lp-container ul li {
+    font-size: 72px;
+    line-height: 84px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+
+  .site-header {
+    padding: 30px 15px;
+  }
+
+  #main-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .slide {
+    padding: 0 30px;
+  }
+
+  h1, h2 {
+    font-size: 30px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+  }
+
+  #lp-container h1 {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+
+  #vid-container {
+    height: 50px;
+    margin-left: -5px;
+    width: calc(100% + 5px);
+  }
+
+  .heading-text {
+    font-size: 48px !important;
+    letter-spacing: -0.75px;
+    x: 7;
+  }
+
+  #lp-container ul li {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .lead-container .description p, .services-description h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  #services .service img {
+    max-height: 70px;
+  }
+
+  #services .service h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .services-description {
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+
+  .services-description p, .description, .description p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  #newsletter-listings li.item, #client-list li.item {
+    font-size: 30px;
+    line-height: 32px;
+    display: block;
+  }
+
+  .details .item, .details .item a {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  #client-list li.item img {
+    display: none;
+  }
+
+  #client-list li.item a {
+    color: #060606;
+  }
+
+}

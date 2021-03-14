@@ -62,7 +62,7 @@ $map = get_field('map');
         $dog = get_sub_field('dog_or_human');
 
         ?>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 team-member-container <?php if ($index == 6) { echo 'selected';} ?>  <?php if ($dog) { echo "dog"; } ?>">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 team-member-container <?php if ($index == 6) { echo 'selected';} ?>  <?php if ($dog) { echo "dog"; } ?>">
           <div class="team-member text-center">
 
             <?php if ( $photo ) { ?>
@@ -164,9 +164,9 @@ $map = get_field('map');
             ?>
 
             <?php if ($index % 3 == 0) { ?>
-              <div class="col-4"></div>
+              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"></div>
             <?php } else { ?>
-              <div class="benefit small col-4">
+              <div class="benefit small col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                 <?php echo $name_of_benefit; ?>
               </div>
             <?php } ?>

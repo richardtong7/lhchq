@@ -26,11 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="container-fluid container-lhc">
 	<div class="row">
-		<div class="col-7" id="newsletter-text">
+		<div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7" id="newsletter-text">
 			<?php echo get_the_content(); ?>
 		</div>
-		<div class="col-2"></div>
-		<div class="col-3" id="sidebar">
+		<div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+		<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="sidebar">
 
 			<?php if (have_rows('news_item')): ?>
 				<div class="sidebar-section" id="things-are-happening">

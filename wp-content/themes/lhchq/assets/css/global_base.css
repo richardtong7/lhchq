@@ -159,8 +159,8 @@ a:hover {
 }
 
 .description, .description p {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 21px;
+  line-height: 30px;
   color: #666666;
   font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
@@ -245,8 +245,8 @@ h2 {
 /* Newsletter */
 
 #newsletter-content-container, #newsletter-content-container p {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 21px;
+  line-height: 30px;
   max-width: 600px;
 }
 
@@ -284,8 +284,8 @@ h2 {
 /* Alternate Option */
 
 #newsletter-text, #newsletter-text p {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 21px;
+  line-height: 30px;
 }
 
 #newsletter-text h2 {
@@ -391,8 +391,8 @@ h2 {
 }
 
 #case-study-text p, #case-study-text ul {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 21px;
+  line-height: 30px;
   margin-bottom: 50px;
 }
 

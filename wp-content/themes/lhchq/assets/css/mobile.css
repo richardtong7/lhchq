@@ -52,8 +52,8 @@
   h1, h2 {
     font-size: 30px;
     line-height: 32px;
-    margin-bottom: 5px;
-    letter-spacing: -1px;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
   }
 
   #lp-container h1 {
@@ -95,7 +95,7 @@
   }
 
   #services .service h3 {
-    font-size: 24px;
+    font-size: 21px;
     line-height: 30px;
   }
 
@@ -126,6 +126,105 @@
 
   #client-list li.item a {
     color: #060606;
+  }
+
+
+  #team-members .team-member-container .team-member {
+    height: 100px;
+  }
+
+  #team-members .team-member-container .team-member .photo {
+    height: 100px;
+  }
+
+  #team-members .team-member-container .team-member .photo img {
+    height: 100px;
+  }
+
+  .eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .subhead {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .benefit {
+    font-size: 16px;
+    line-height: 23px;
+    color: #aaaaaa;
+  }
+
+  .container-lhc {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #mc_embed_signup {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  #mc_embed_signup input[type=submit] {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  #newsletter-testimonial {
+    padding: 0;
+    padding-left: 45px;
+    padding-bottom: 20px;
+    text-align: left !important;
+  }
+
+  #newsletter-text figure {
+    margin-right: 0;
+  }
+
+  #newsletter-text h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  #newsletter-text img {
+    max-width: 100%;
+  }
+
+  #sidebar h5 {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  #sidebar .news.item .small-description, #sidebar .news.item .small-description p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  #sidebar .item .small-description, #sidebar .item .small-description p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  #background-statement p {
+    font-size: 30px;
+    line-height: 32px;
+    padding: 150px 0 175px 0;
+  }
+
+  #gallery-images .gallery-img-container {
+    height: 300px;
+  }
+
+  #gallery-images .gallery-img-container img {
+    height: 300px;
+  }
+
+  #more-case-studies a.case-study {
+    font-size: 30px;
+    line-height: 32px;
+    margin-right: 20px;
   }
 
 }

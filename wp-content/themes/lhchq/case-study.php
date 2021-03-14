@@ -37,7 +37,7 @@ get_header();
 
 <div class="container-fluid container-lhc" id="background-statement">
 	<div class="row">
-		<div class="col-10 col-centered">
+		<div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-centered">
 			<?php echo $background_info ?>
 		</div>
 	</div>
@@ -56,12 +56,12 @@ get_header();
 
 <div class="container-fluid container-lhc" id="case-study-container">
 	<div class="row">
-		<div class="col-6" id="case-study-text">
+		<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" id="case-study-text">
 			<?php echo get_the_content(); ?>
 		</div>
-		<div class="col-1"></div>
+		<div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
 
-		<div class="col-5">
+		<div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
 			<div id="case-study-stats">
 
 				<?php if (have_rows('results')): ?>

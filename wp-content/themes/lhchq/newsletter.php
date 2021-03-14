@@ -24,7 +24,7 @@
 
 <div class="container-fluid" id="mailchimp-signup">
   <div class="row">
-    <div class="col-8">
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup">
         <form action="https://lhchq.us17.list-manage.com/subscribe/post?u=d78e6378250fe9ea33d1d8c74&amp;id=9ff04b7d82" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -42,7 +42,7 @@
 
       <!--End mc_embed_signup-->
     </div>
-    <div class="col-4" id="newsletter-testimonial">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="newsletter-testimonial">
       <div class="testimonial">"By far the best newsletter I get from a dog."</div>
       <div class="source">- Janet Yellen</div>
     </div>

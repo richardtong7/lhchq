@@ -32,24 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="col-2"></div>
 		<div class="col-3" id="sidebar">
 
-
-			<?php if (have_rows('job')): ?>
-				<div class="sidebar-section" id="some-high-paying-jobs">
-					<h5>Some high paying jobs</h5>
-					<?php while (have_rows('job')): the_row();
-						$title = get_sub_field('job_title');
-						$description = get_sub_field('job_description');
-						$url = get_sub_field('clickthrough_url'); ?>
-						<div class="job item">
-							<label class="job-title"><?php echo $title; ?></label>
-							<div class="job-description small-description"><?php echo $description; ?></div>
-							<a href="<?php echo $url; ?>" class="link">Apply Now &rarr;</a>
-						</div>
-					<?php endwhile; ?>
-				</div>
-			<?php endif; ?>
-
-
 			<?php if (have_rows('news_item')): ?>
 				<div class="sidebar-section" id="things-are-happening">
 					<h5>Things are happening</h5>

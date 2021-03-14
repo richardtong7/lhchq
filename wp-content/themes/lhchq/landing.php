@@ -27,7 +27,7 @@
           <video autoplay playsinline muted loop preload poster="assets/oceanshot.jpg" style="margin-top: -720px;">
             <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
-          <svg viewBox="0 0 1000 60">
+          <svg viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg">
             <g class="header-backdrop" mask="url(#header-mask)">
               <rect id="cover" x="0" y="0" width="100%" height="100%" />
             </g>

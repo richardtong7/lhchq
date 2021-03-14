@@ -45,6 +45,11 @@
     padding-right: 15px;
   }
 
+
+  body.admin-bar #main-container {
+    height: calc(100vh - 46px);
+  }
+
   .slide {
     padding: 0 30px;
   }
@@ -64,20 +69,19 @@
   }
 
   #vid-container {
-    height: 50px;
+    height: 48px;
     margin-left: -5px;
-    width: calc(100% + 5px);
   }
 
   .heading-text {
-    font-size: 48px !important;
+    font-size: 47px !important;
     letter-spacing: -0.75px;
-    x: 7;
   }
 
   #lp-container ul li {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 42px;
+    margin-right: 10px;
   }
 
   .lead-container .description p, .services-description h2 {

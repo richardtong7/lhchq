@@ -11,6 +11,10 @@
   height: 100vh;
 }
 
+body.admin-bar #main-container {
+
+}
+
 #lp-container {
   margin-top: -100px;
 }

@@ -14,7 +14,7 @@ $map = get_field('map');
   <div class="row">
     <div class="col-12">
       <div class="eyebrow">About</div>
-      <h1 class="serif">Lighthouse Creative is a <br/><span>full-stack</span> content agency.</h1>
+      <h1 class="serif">Lighthouse Creative is a <br/>full-service content agency.</h1>
     </div>
     <?php if ($description) { ?>
       <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">

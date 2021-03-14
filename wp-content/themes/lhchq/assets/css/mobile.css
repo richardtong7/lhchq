@@ -70,7 +70,8 @@
 
   #vid-container {
     height: 46px;
-    margin-left: -6px;
+    margin-left: -7px;
+    padding-left: 1px;
   }
 
   .heading-text {

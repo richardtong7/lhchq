@@ -10,6 +10,10 @@
     display: none;
   }
 
+  #main, body, html {
+    height: 100%;
+  }
+
 </style>
 
 <div class="flex-container" id="lp-outer-container">

@@ -13,7 +13,7 @@ body.admin-bar #main-container {
 
 
 #lp-outer-container {
-  height: 100vh;
+  height: 100%;
 }
 
 #lp-container ul li {

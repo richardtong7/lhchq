@@ -45,11 +45,6 @@
     padding-right: 15px;
   }
 
-
-  body.admin-bar #main-container {
-    height: calc(100vh - 46px);
-  }
-
   .slide {
     padding: 0 30px;
   }

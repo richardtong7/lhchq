@@ -146,22 +146,34 @@ $map = get_field('map');
   </div>
 </div>
 
-<div class="container slide inverse black flex-container left-align" style="background: url('https://live.staticflickr.com/65535/50803867588_a2c642805a_h.jpg') no-repeat; background-size: cover !important; background-position: center center">
+<div class="container slide inverse black flex-container left-align" style="background: url('http://lhchqstaging.wpengine.com/wp-content/uploads/2021/03/charles-1-1-scaled.jpg') no-repeat; background-size: cover !important; background-position: center center">
   <div class="row details">
     <div class="col-12">
       <div class="eyebrow">Work With Us</div>
-      <h2>Benefits.</h2>
+      <h2>How we work.</h2>
+      <div class="subhead">We are invested in the growth of both our clients and our team. We always respect our clients’ humanity, even when their requests are superhuman. We fully believe that work/life balance is compatible with being an always-responsive, letter-perfect services business.</div>
     </div>
     <div class="clear"></div>
 
     <?php if (have_rows('benefit')) { ?>
-      <?php while (have_rows('benefit')): the_row();
-        $name_of_benefit = get_sub_field('name_of_benefit');
-        ?>
-        <div class="item small col-6">
-          <?php echo $name_of_benefit; ?>
+      <div id="benefits" class="container-fluid">
+        <div class="row">
+          <?php while (have_rows('benefit')): the_row();
+            $name_of_benefit = get_sub_field('name_of_benefit');
+            $index = get_row_index();
+            ?>
+
+            <?php if ($index % 3 == 0) { ?>
+              <div class="col-4"></div>
+            <?php } else { ?>
+              <div class="benefit small col-4">
+                <?php echo $name_of_benefit; ?>
+              </div>
+            <?php } ?>
+
+          <?php endwhile; ?>
         </div>
-      <?php endwhile; ?>
+      </div>
     <?php } ?>
   </div>
 </div>

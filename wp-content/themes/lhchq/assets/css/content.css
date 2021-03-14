@@ -16,10 +16,6 @@ body.admin-bar #main-container {
   height: 100vh;
 }
 
-#lp-container {
-  margin-top: -100px;
-}
-
 #lp-container ul li {
   display: inline-block;
   width: auto;

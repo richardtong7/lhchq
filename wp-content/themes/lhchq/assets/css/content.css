@@ -7,12 +7,12 @@
 
 /* Landing Page */
 
-#main-container {
-  height: 100vh;
-}
-
 body.admin-bar #main-container {
 
+}
+
+#lp-outer-container {
+  height: 100vh;
 }
 
 #lp-container {

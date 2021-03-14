@@ -10,13 +10,9 @@
     display: none;
   }
 
-  #main-container {
-    padding-right: 0;
-  }
-
 </style>
 
-<div id="main-container" class="flex-container">
+<div class="flex-container" id="lp-outer-container">
   <div class="container-fluid collapse-padding-right">
     <div class="row">
       <div class="col-12" id="lp-container">

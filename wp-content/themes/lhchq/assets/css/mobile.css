@@ -68,6 +68,10 @@
     margin-bottom: 0;
   }
 
+  #lp-outer-container {
+    padding-left: 15px;
+  }
+
   #vid-container {
     height: 45px;
     margin-left: -5px;

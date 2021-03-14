@@ -207,6 +207,27 @@ body.admin-bar #main-container {
   opacity: 0.0;
 }
 
+.subhead {
+  color: #aaaaaa;
+  font-family: "Canela", serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 48px;
+  max-width: 800px;
+}
+
+#benefits {
+  margin-top: 15px;
+}
+
+.benefit {
+  font-size: 21px;
+  line-height: 30px;
+  color: #666666;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
 .details .item {
   color: #aaaaaa;
   font-family: "Canela", serif;

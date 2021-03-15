@@ -42,7 +42,7 @@
         $parameterized_label = str_replace(" ","-", strtolower($label));
         $link = get_sub_field('link');
         ?>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 service" id="preview-<?php echo $parameterized_label; ?>">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 service" id="preview-<?php echo $parameterized_label; ?>">
           <div class="icon-container">
             <a href="#"><img src="<?php echo $icon['url']; ?>" class="default"/></a>
             <a href="#"><img src="<?php echo $icon_hover['url']; ?>" class="hover open-fs-modal"/></a>

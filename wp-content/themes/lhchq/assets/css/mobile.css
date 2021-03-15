@@ -5,6 +5,23 @@
     line-height: 84px;
   }
 
+  .lead-container .description p {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  #fs-modal #fs-modal-header {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+  }
+
+  #fs-modal #fs-modal-subhead {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
   #vid-container {
     width: calc(100% + 15px);
     height: 130px;

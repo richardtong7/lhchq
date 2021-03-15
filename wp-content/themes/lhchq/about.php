@@ -9,6 +9,11 @@ $map = get_field('map');
 
 ?>
 <?php get_header();?>
+<style type="text/css">
+  #fs-modal #fs-modal-testimonial::before {
+    display: none;
+  }
+</style>
 
 <div class="container slide flex-container left-align">
   <div class="row">
@@ -17,7 +22,7 @@ $map = get_field('map');
       <h1 class="serif">Lighthouse Creative is a <br/>full-service content agency.</h1>
     </div>
     <?php if ($description) { ?>
-      <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+      <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
         <div class="description lead">
           <?php echo $description; ?>
         </div>

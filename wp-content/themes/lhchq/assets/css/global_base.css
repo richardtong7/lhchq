@@ -654,11 +654,11 @@ h2 {
   max-height: 18px;
 }
 
-#clients img#mta {
+#clients img#mta, #clients img#nys-mta {
   max-height: 35px;
 }
 
-#clients img#ny-state {
+#clients img#ny-state, #clients img#nys-office-of-rent-administration {
   max-height: 50px;
 }
 

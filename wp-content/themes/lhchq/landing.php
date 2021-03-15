@@ -23,8 +23,8 @@
 
 
         <!-- Video -->
-        <div id="vid-container">
-          <video autoplay playsinline muted loop preload poster="assets/oceanshot.jpg" style="margin-top: -720px;">
+        <div id="vid-container" style="background: #060606">
+          <video autoplay playsinline muted loop preload poster="http://lhchq.com/wp-content/uploads/2021/03/black.png" style="margin-top: -720px;">
             <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
           <svg viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg">

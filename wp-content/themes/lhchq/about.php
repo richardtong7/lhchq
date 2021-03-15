@@ -25,29 +25,40 @@ $map = get_field('map');
     <?php } ?>
   </div>
 
-  <div id="scroll-notice">scroll to learn more</div>
-
 </div>
 
-<div id="team-member-detail">
-  <div id="team-member-detail-outer" class="flex-container left-align">
-    <div id="team-member-detail-inner" class="container">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="bio-container">
-          <div id="detail-title">title</div>
-          <div id="detail-name"></div>
+
+<div id="fs-modal">
+
+  <!-- X to close -->
+  <div id="mdiv">
+    <div class="mdiv">
+      <div class="md"></div>
+    </div>
+  </div>
+
+  <div id="fs-modal-inner" class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8" id="fs-modal-left">
+        <div id="fs-modal-header"></div>
+        <div id="fs-modal-subhead"></div>
+        <div id="fs-modal-description"></div>
+        <div id="fs-modal-testimonial">
+          <div id="fs-modal-testimonial-quote"></div>
+          <div id="fs-modal-testimonial-source"></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-          <div id="detail-bio"></div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="photo-container">
-        </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" id="fs-modal-right">
+        <div id="fs-modal-photo"></div>
+        <div id="fs-modal-photo-name"></div>
+        <div id="fs-modal-photo-title"></div>
       </div>
     </div>
   </div>
+
+  <div class="clear"></div>
 </div>
+
 
 <div class="container slide height-auto black inverse flex-container" id="team-members">
   <div class="row text-center" style="justify-content: center">
@@ -182,9 +193,8 @@ $map = get_field('map');
 <?php get_footer();?>
 
 <script type="text/javascript">
-
   $(window).on("click", function(e) {
-    var team_member_detail = $("#team-member-detail-inner");
+    var modal_detail = $("#fs-modal-inner");
 
     if ($(e.target).hasClass("slide")) {
       var element = $(e.target).next();
@@ -205,72 +215,21 @@ $map = get_field('map');
             bio = elem.find(".bio").text().trim(),
             photo = elem.find(".photo img").attr("src");
 
-        $("#team-member-detail #detail-title").text(title);
-        $("#team-member-detail #detail-name").text(name);
-        $("#team-member-detail #detail-bio").text(bio);
+        $("#fs-modal #fs-modal-header").text(name);
+        $("#fs-modal #fs-modal-subhead").text(title);
+        $("#fs-modal #fs-modal-description").text(bio);
 
         if (photo == undefined) {
-          $("#team-member-detail #photo-container").html("");
+          $("#fs-modal-photo").html("");
         } else {
-          $("#team-member-detail #photo-container").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
+          $("#fs-modal-photo").html("<img src='" + photo + "' alt='" + name + "' class='img-fluid'/>");
         }
 
-        $("#team-member-detail").fadeIn(200);
-        animateName();
+        $("#fs-modal").fadeIn(200);
       }
 
-    } else if (!team_member_detail.is(e.target) && team_member_detail.has(e.target).length === 0) {
-      $("#team-member-detail").fadeOut(200);
-      resetName();
+    } else if (!modal_detail.is(e.target) && modal_detail.has(e.target).length === 0) {
+      $("#fs-modal").fadeOut(200);
     }
   })
-
-
-  function resetName() {
-    $("#team-member-detail #detail-title").css({
-      'left' : '20px',
-      'opacity' : '0.0'
-    });
-    $("#team-member-detail #detail-bio").css({
-      'left' : '5px',
-      'opacity' : '0.0'
-    });
-    $("#team-member-detail #photo-container").css({
-      'opacity' : '0.0'
-    });
-  }
-
-  function animateName() {
-    var textWrapper = document.querySelector('#team-member-detail #detail-name');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-    anime.timeline({loop: false})
-      .add({
-        targets: '#detail-name .letter',
-        translateX: [40,0],
-        translateZ: 0,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 600,
-        delay: (el, i) => 500 + 30 * i
-      })
-
-    $("#team-member-detail #detail-title").animate({
-      opacity: 1.0,
-      left: "0",
-    }, 1200, function(){
-      $("#team-member-detail #detail-bio").animate({
-        opacity: 1.0,
-        left: "0"
-      }, 400)
-
-      $("#team-member-detail #photo-container").css("opacity", "1.0");
-      $("#team-member-detail #photo-container img").animate({
-        opacity: 1.0,
-        left: "0"
-      }, 400)
-    })
-  }
-
-
 </script>

@@ -23,6 +23,16 @@ get_header();
 	$background_info = get_field('background_info');
 	$results_description = get_field('results_description');
 
+	// WP Query
+	$case_studies = new WP_Query( array(
+		'post_type' => 'case-study',
+		'post_status' => 'publish',
+		'posts_per_page' => 100,
+		'orderby' => 'title',
+		'order' => 'ASC'
+		)
+	);
+
 ?>
 
 <div id="case-study-hero" <?php if ($hero_image) { ?>style=background:url('<?php echo $hero_image["url"]; ?>');<?php } ?>>
@@ -113,12 +123,18 @@ get_header();
 	<div class="row">
 		<div class="col-12">
 			<h1 class="sans">More case studies.</h1>
-			<?php $more_case_studies = array("Amazon Pay","Andela","Ceros","HIMSS","Amazon Pay Gift Guide", "IBM","Keystone","Lynda Carter", "NY State","NYS MTA");
-
-			foreach ($more_case_studies as $client) { ?>
-				<a href="/case-study/" class="case-study"><?php echo $client; ?></a>
+			<?php if ( $case_studies->have_posts() ) { ?>
+				<ul>
+					<?php
+					while ( $case_studies->have_posts() ) : $case_studies->the_post();
+						?>
+						<li class="case-study-container">
+							<a href="<?php the_permalink(); ?>" class="case-study"><?php the_title(); ?></a>
+						</li>
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+				</ul>
 			<?php } ?>
-			<ul></ul>
 		</div>
 	</div>
 </div>

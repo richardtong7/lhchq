@@ -17,7 +17,7 @@
             ?>
             <li class="item">
               <?php if ($url) { ?>
-                <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+                <a href="<?php echo $url; ?>" target="_blank"><?php echo $name; ?></a>
               <?php } else { ?>
                 <?php echo $name; ?>
               <?php } ?>

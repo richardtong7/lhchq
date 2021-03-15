@@ -149,7 +149,7 @@ body.admin-bar #main-container {
   display: none;
 }
 
-#team-member-detail {
+#fs-modal {
   position: fixed;
   display: none;
   width: 100%;
@@ -157,54 +157,129 @@ body.admin-bar #main-container {
   left: 0;
   top: 0;
   z-index: 1000;
-  background: rgba(0,0,0,0.95);
-  color: #ffffff;
+  background: rgba(255,255,255,1.0);
+  color: #060606;
+  overflow-y: scroll;
 }
 
-#team-member-detail #team-member-detail-outer {
-  height: 100%;
+#fs-modal #fs-modal-inner {
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
-#team-member-detail #detail-title {
+#fs-modal #fs-modal-header {
   font-family: 'Helvetica Neue';
-  font-size: 16px;
-  line-height: 48px;
-  letter-spacing: 1.3px;
-  color: #FF2A6E;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+  font-size: 84px;
+  line-height: 84px;
+  margin-bottom: 20px;
+  margin-top: 35px;
+  letter-spacing: -2px;
   font-weight: bold;
-  margin-top: -25px;
-  opacity: 0.0;
-  position: relative;
-  left: 20px;
 }
 
-#team-member-detail #detail-name {
-  font-family: "Canela";
+#fs-modal #fs-modal-subhead {
+  font-size: 60px;
+  line-height: 60px;
+  color: #AAAAAA;
+  font-family: "Canela", serif;
   font-weight: 300;
-  font-size: 92px;
-  line-height: 92px;
-  margin-bottom: 15px;
+  max-width: 95%;
 }
 
-#team-member-detail #detail-name .letter {
-  display: inline-block;
-}
-
-#team-member-detail #detail-bio {
-  font-family: 'Helvetica Neue';
+#fs-modal #fs-modal-description {
   font-size: 21px;
-  line-height: 36px;
-  color: #666666;
+  line-height: 30px;
+  color: #888888;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
   max-width: 90%;
-  opacity: 0.0;
-  position: relative;
-  left: 5px;
+  margin-top: 20px;
 }
 
-#team-member-detail #photo-container img {
-  opacity: 0.0;
+#fs-modal #fs-modal-photo {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+#fs-modal #fs-modal-photo-name {
+  font-weight: bold;
+}
+
+#fs-modal #fs-modal-photo-title {
+  color: #888888;
+}
+
+#fs-modal #fs-modal-photo-name, #fs-modal #fs-modal-photo-title {
+  text-align: right;
+  font-size: 14px;
+}
+
+#fs-modal #fs-modal-right {
+  padding-bottom: 150px;
+}
+
+#fs-modal #fs-modal-testimonial::before {
+  clear: both;
+  display: block;
+  margin-top: 35px;
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #cccccc;
+  margin-bottom: 25px;
+}
+
+#fs-modal #fs-modal-testimonial #fs-modal-testimonial-quote {
+  font-size: 21px;
+  line-height: 27px;
+  font-family: "Canela", serif;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+#fs-modal #fs-modal-testimonial #fs-modal-testimonial-source {
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  clear: both;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#services-detailed-descriptions {
+  display: none !Important;
+}
+
+#mdiv {
+  width: 25px;
+  height: 25px;
+  margin-left: 43px;
+  margin-top: 62px;
+}
+
+#mdiv:hover {
+  cursor: pointer;
+}
+
+.mdiv {
+  height: 25px;
+  width: 2px;
+  margin-left: 12px;
+  background-color: black;
+  transform: rotate(45deg);
+  Z-index: 1;
+}
+
+.md {
+  height: 25px;
+  width: 2px;
+  background-color: black;
+  transform: rotate(90deg);
+  Z-index: 2;
 }
 
 .subhead {
@@ -316,7 +391,7 @@ body.admin-bar #main-container {
 .services-description {
   font-size: 21px;
   line-height: 30px;
-  color: #aaaaaa;
+  color: #888888;
   font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
   padding-right: 100px;

@@ -1,4 +1,10 @@
 @media (max-width: 1440px) {
+
+  h1 {
+    font-size: 84px;
+    line-height: 84px;
+  }
+
   #vid-container {
     width: calc(100% + 15px);
     height: 130px;
@@ -16,6 +22,13 @@
 }
 
 @media (max-width: 1180px) {
+
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+  }
+
   #vid-container {
     height: 110px;
     margin-left: -15px;
@@ -225,6 +238,40 @@
     font-size: 30px;
     line-height: 32px;
     margin-right: 20px;
+  }
+
+  #mdiv {
+    margin-left: 28px;
+  }
+
+  #fs-modal #fs-modal-inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #fs-modal #fs-modal-header {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+  }
+
+  #fs-modal #fs-modal-subhead {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  #fs-modal #fs-modal-description {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  #fs-modal #fs-modal-photo {
+    margin-top: 30px;
+  }
+
+  #fs-modal #fs-modal-right {
+    padding-bottom: 200px;
   }
 
 }

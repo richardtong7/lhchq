@@ -504,6 +504,10 @@ h2 {
   padding-bottom: 250px;
 }
 
+#more-case-studies li.case-study-container {
+  display: inline-block;
+}
+
 #more-case-studies a.case-study {
   font-size: 92px;
   line-height: 92px;

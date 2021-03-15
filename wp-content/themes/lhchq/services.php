@@ -180,7 +180,7 @@
 
       var header = $("#" + service_id + " .service-name").text().trim(),
           subhead = $("#" + service_id + " .service-description h2").text().trim(),
-          description = $("#" + service_id + " .service-description p").text().trim(),
+          description = $("#" + service_id + " .service-description p").html(),
           photo = $("#" + service_id + " .service-photo").text().trim(),
           team_lead = $("#" + service_id + " .service-team-lead").text().trim(),
           quote = $("#" + service_id + " .service-quote").text().trim(),
@@ -188,7 +188,7 @@
 
       $("#fs-modal #fs-modal-header").text(header);
       $("#fs-modal #fs-modal-subhead").text(subhead);
-      $("#fs-modal #fs-modal-description").text(description);
+      $("#fs-modal #fs-modal-description").html(description);
       if (photo == undefined) {
         $("#fs-modal-photo").html("");
       } else {

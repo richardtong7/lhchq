@@ -196,6 +196,10 @@ body.admin-bar #main-container {
   margin-top: 20px;
 }
 
+#fs-modal #fs-modal-description a {
+  color: #ff2a6e;
+}
+
 #fs-modal #fs-modal-photo {
   margin-top: 60px;
   margin-bottom: 10px;

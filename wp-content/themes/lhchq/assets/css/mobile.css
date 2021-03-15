@@ -59,7 +59,15 @@
   }
 
   .slide {
+    height: auto;
+    min-height: 600px;
     padding: 0 30px;
+  }
+
+  #map.slide {
+    height: 480px;
+    min-height: 480px;
+    background-position: 58% 0 !important;
   }
 
   h1, h2 {

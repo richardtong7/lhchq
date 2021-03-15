@@ -124,7 +124,7 @@ $map = get_field('map');
 </div>
 
 <?php if ($map) { ?>
-  <div class="container slide flex-container left-align" id="map" style="background:url('<?php echo $map["url"]; ?>') no-repeat; background-size: cover !important; background-position: center center !important;">
+  <div class="container slide flex-container left-align" id="map" style="background:url('<?php echo $map["url"]; ?>') no-repeat; background-size: cover !important; background-position: center center;">
     <div class="row">
       <div class="col-12">
       </div>

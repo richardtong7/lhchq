@@ -167,10 +167,10 @@
 
 <script type="text/javascript">
   $(window).on("click", function(e) {
-    e.preventDefault();
     var modal_detail = $("#fs-modal-inner");
 
     if ($(e.target).hasClass("open-fs-modal")) {
+      e.preventDefault();
 
       if ($(e.target).hasClass("hover")) {
         var service_id = $(e.target).parent().parent().parent().attr("id").replace("preview-","");

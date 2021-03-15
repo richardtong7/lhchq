@@ -139,4 +139,11 @@ add_filter('single_template', function($original){
   }
 });
 
+function sentenceCase($str) {
+  $lowercase_title = strtolower($str);
+  $sentence_case = ucfirst($lowercase_title);
+  return $sentence_case;
+}
+
+
 ?>

@@ -60,9 +60,10 @@
             <?php
             while ( $posts->have_posts() ) : $posts->the_post();
               $index = $total_post_count - ($posts->current_post);
+              $title = get_the_title();
               ?>
               <li class="item">
-                <a href="<?php the_permalink(); ?>"><span><?php echo $index ; ?>. </span> <?php the_title(); ?></a>
+                <a href="<?php the_permalink(); ?>"><span><?php echo $index ; ?>. </span> <?php echo $title; ?></a>
               </li>
             <?php endwhile;
             wp_reset_postdata(); ?>

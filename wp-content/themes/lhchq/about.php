@@ -233,8 +233,12 @@ $map = get_field('map');
         $("#fs-modal").fadeIn(200);
       }
 
+    } else if ($(e.target).attr("id") == "mdiv") {
+      $("#fs-modal").fadeOut(200);
     } else if (!modal_detail.is(e.target) && modal_detail.has(e.target).length === 0) {
       $("#fs-modal").fadeOut(200);
     }
+
+
   })
 </script>

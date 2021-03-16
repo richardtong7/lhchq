@@ -463,3 +463,51 @@ body.admin-bar #main-container {
   font-weight: 300;
   font-family: "Canela", serif;
 }
+
+#contact-form {
+  width: 500px;
+}
+
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+  max-width: 100%;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
+  color: #aaaaaa;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  clear: both;
+  display: block;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
+  background: #060606;
+  color: #ffffff;
+  border: 0;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]:hover, div.wpforms-container-full .wpforms-form button[type=submit]:hover, div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+   background: #ff2a6e;
+   border: 0;
+ }
+
+ div.wpforms-container-full .wpforms-form label.wpforms-error {
+   margin-top: 10px;
+ }
+
+ .wpforms-confirmation-container-full, div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+   background: #060606;
+   border: 0;
+   color: #ffffff;
+   margin-top: 45px;
+ }

@@ -89,7 +89,7 @@ $map = get_field('map');
               <?php if ($name) { ?>
                 <div class="name">
                   <?php if ($muted) { ?>
-                    <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted"/>
+                    <img src="https://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted"/>
                   <?php } ?>
                   <?php echo $name; ?>
                 </div>
@@ -101,7 +101,7 @@ $map = get_field('map');
               <?php if ($name) { ?>
                 <div class="name">
                   <?php if ($muted) { ?>
-                    <img src="http://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted" style="margin-right: 0;"/>
+                    <img src="https://lhchqstaging.wpengine.com/wp-content/uploads/2021/02/icon_muted.png" class="muted" style="margin-right: 0;"/>
                   <?php } ?>
                   <span style="display: none;"><?php echo $name; ?></span>
                 </div>
@@ -162,7 +162,7 @@ $map = get_field('map');
   </div>
 </div>
 
-<div class="container slide inverse black flex-container left-align" style="background: url('http://lhchqstaging.wpengine.com/wp-content/uploads/2021/03/charles-1-1-scaled.jpg') no-repeat; background-size: cover !important; background-position: center center">
+<div class="container slide inverse black flex-container left-align" style="background: url('https://lhchqstaging.wpengine.com/wp-content/uploads/2021/03/charles-1-1-scaled.jpg') no-repeat; background-size: cover !important; background-position: center center">
   <div class="row details">
     <div class="col-12">
       <div class="eyebrow">Work With Us</div>

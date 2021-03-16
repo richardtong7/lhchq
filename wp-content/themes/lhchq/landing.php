@@ -24,10 +24,10 @@
 
         <!-- Video -->
         <div id="vid-container" style="background: #060606">
-          <video autoplay playsinline muted loop preload poster="http://lhchq.com/wp-content/uploads/2021/03/black.png" style="margin-top: -720px;">
+          <video autoplay playsinline muted loop preload poster="https://lhchq.com/wp-content/uploads/2021/03/black.png" style="margin-top: -720px;">
             <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
-          <svg viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 1000 60" xmlns="https://www.w3.org/2000/svg">
             <g class="header-backdrop" mask="url(#header-mask)">
               <rect id="cover" x="0" y="0" width="100%" height="100%" />
             </g>

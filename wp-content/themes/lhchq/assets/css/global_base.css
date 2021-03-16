@@ -566,9 +566,9 @@ h2 {
 /* Newsletter / Clients  */
 
 #newsletter-listings li.item, #client-list li.item {
-  font-size: 92px;
+  font-size: 60px;
   font-family: "Canela", serif;
-  line-height: 92px;
+  line-height: 60px;
   font-weight: 300;
   color: #AAAAAA;
 }

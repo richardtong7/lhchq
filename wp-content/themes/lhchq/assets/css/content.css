@@ -302,9 +302,18 @@ body.admin-bar #main-container {
 .benefit {
   font-size: 21px;
   line-height: 30px;
-  color: #666666;
+  color: #aaaaaa;
   font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
+}
+
+.benefit::before {
+  content: "\2022";
+  display: inline-block;
+  color: #aaaaaa;
+  float: left;
+  margin-right: 15px;
+  font-size: 12px;
 }
 
 .details .item {

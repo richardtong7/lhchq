@@ -178,14 +178,9 @@ $map = get_field('map');
             $name_of_benefit = get_sub_field('name_of_benefit');
             $index = get_row_index();
             ?>
-
-            <?php if ($index % 3 == 0) { ?>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4"></div>
-            <?php } else { ?>
-              <div class="benefit small col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-                <?php echo $name_of_benefit; ?>
-              </div>
-            <?php } ?>
+            <div class="benefit small col-12 ">
+              <?php echo $name_of_benefit; ?>
+            </div>
 
           <?php endwhile; ?>
         </div>

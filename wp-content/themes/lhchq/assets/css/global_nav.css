@@ -303,3 +303,27 @@ svg {
   position: relative;
   z-index: 99999;
 }
+
+ul#footer-socials {
+  position: fixed;
+  bottom: 30px;
+  right: 45px;
+}
+
+ul#footer-socials li {
+  margin-left: 25px;
+  transition: all 0.2s ease;
+  opacity: 1.0;
+}
+
+ul#footer-socials li:hover {
+  opacity: 0.8;
+}
+
+ul#footer-socials li img {
+  height: 24px;
+}
+
+ul#footer-socials li img#instagram {
+  height: 21px;
+}

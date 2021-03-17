@@ -192,6 +192,14 @@ h2 {
   font-weight: bold;
 }
 
+h2.projects {
+  font-weight: 300;
+  color: #aaaaaa;
+  font-size: 84px;
+  line-height: 78px;
+  margin-top: -25px;
+}
+
 .black h2 {
   color: #ffffff;
 }

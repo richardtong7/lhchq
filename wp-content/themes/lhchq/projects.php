@@ -5,13 +5,26 @@
 ?>
 <?php get_header();?>
 
+<style type="text/css">
+
+  #projects-subhead p:before {
+    content: "(";
+  }
+  #projects-subhead p:after {
+    content: ")";
+  }
+  #projects-subhead {
+    margin-bottom: 25px;
+  }
+</style>
+
 <div class="container-fluid container-lhc lead-container">
   <div class="row">
     <div class="col-12">
       <h1 class="sans"><?php echo get_the_title(); ?>.</h1>
-      <h2 class="sans projects" style="margin-bottom: 25px;">
+      <div class="description" id="projects-subhead">
         <?php echo get_the_content(); ?>
-      </h2>
+      </div>
       <div class="description small" id="newsletter-listings">
         <?php if (have_rows('project')) { ?>
           <?php while (have_rows('project')): the_row();

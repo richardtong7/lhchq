@@ -14,6 +14,7 @@
     height: 100%;
   }
 
+
 </style>
 
 <div class="flex-container" id="lp-outer-container">
@@ -24,7 +25,7 @@
 
         <!-- Video -->
         <div id="vid-container">
-          <video autoplay playsinline muted loop preload poster="https://lhchq.com/wp-content/uploads/2021/03/black.png" style="margin-top: -720px;">
+          <video autoplay playsinline muted loop preload poster="https://lhchq.com/wp-content/uploads/2021/03/black.png" id="train">
             <source type="video/mp4" src="https://lhchq.s3.amazonaws.com/brooklyn+train.mp4" />
           </video>
           <svg viewBox="0 0 1000 60" xmlns="https://www.w3.org/2000/svg">
@@ -51,3 +52,14 @@
 </div>
 
 <?php get_footer();?>
+
+<script type="text/javascript">
+  $("#lp-container").hide();
+  $("#vid-container svg").css("position","relative");
+  setTimeout(function(){ reappear() }, 500);
+
+  function reappear() {
+    $("#vid-container svg").css("position","absolute");
+    $("#lp-container").show();
+  }
+</script>

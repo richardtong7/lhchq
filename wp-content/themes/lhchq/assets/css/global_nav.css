@@ -256,6 +256,11 @@
   margin-bottom: 20px;
 }
 
+video#train {
+  height: 1080px;
+  margin-top: -720px;
+}
+
 .heading-text {
   font-size: 48px;
   font-weight: bold;

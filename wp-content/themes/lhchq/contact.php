@@ -11,7 +11,9 @@
     <div class="col-12">
       <h1 class="sans"><?php echo get_the_title(); ?>.</h1>
       <div id="contact-form">
-        <?php echo do_shortcode('[wpforms id="624"]'); ?>
+        <?php
+          echo the_content();
+        ?>
       </div>
     </div>
   </div>

@@ -27,10 +27,91 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="container-fluid container-lhc">
 	<div class="row">
 		<div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7" id="newsletter-text">
+
+			<?php if ($post_type == "j") { ?>
+				<h2>About The Job</h2>
+			<?php } ?>
+
 			<?php echo get_the_content(); ?>
+
+			<!-- Job Responsibilities -->
+			<?php
+				$responsibilities = get_field('responsibilities');
+				if ($responsibilities) { ?>
+					<h2>Responsibilities</h2>
+					<div id="job-responsibilities">
+						<?php echo $responsibilities; ?>
+					</div>
+
+				<?php }
+			?>
+
+			<?php if ($post_type == "j") { ?>
+				<div class="clear"></div><br/>
+				<h2>A few things about how we work at LHC</h2>
+				<ul id="how-we-work">
+					<li>Work hard, but not dumb.</li>
+					<li>We’re a chill group but we’re in a services business and we should treat it as such - that means responsiveness, respect, professionalism, polish, thoughtfulness etc. </li>
+					<li>We respect our clients’ essential humanity even when they seem inhuman (and we try to understand their challenges and what they want to accomplish). </li>
+					<li>We value your personal life, and we really will try not to bug you with requests on off hours. That means Fridays. </li>
+					<li>That said, clients gonna client, so in some cases there will be exceptions. </li>
+					<li>We respect each other’s time / no pointless meetings (30 mins max). </li>
+					<li>We DO expect responsiveness to questions -- keep Slack on your phone. No one will ask you to do work on the weekend, but we may have questions we need your help answering. </li>
+					<li>Ask for forgiveness not permission; trust your instincts. </li>
+					<li>No questions are bad questions; very few ideas are bad ideas. </li>
+					<li>If you’re swamped and there are too many things for you to do, let us know, don’t suffer stoically, and don’t work hella late because you have too much on your plate. </li>
+					<li>This is YOUR company, so speak up. </li>
+					<li>We love it if you have outside interests and we support your pursuit of them.</li>
+				</ul>
+			<?php } ?>
+
 		</div>
 		<div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
 		<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" id="sidebar">
+
+			<?php if ($post_type == "j") { ?>
+				<div class="sidebar-section" id="to-apply">
+					<h5>To Apply</h5>
+					<div>
+						To apply for this job, email Sam Slaughter at <a href="mailto:sam@lhchq.com">sam@lhchq.com.</a>
+						<div class="clear"></div>
+						<a href="mailto:sam@lhchq.com" class="btn">APPLY NOW</a>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="sidebar-section" id="about-us">
+					<h5>About Us</h5>
+					<div>
+						LHC is a 4-year-old content agency with around 15 full and part-time employees. We focus primarily on creating digital content for companies of all different sizes, including copy and longform writing, graphic design, video production, and web development.<br/><br/>Our clients are typically marketing departments at B2B brands, ranging from enterprise (Amazon, IBM) to public sector (NY State, the MTA), to small and mid-size startups (Andela, Cloudera, Wix).
+					</div>
+				</div>
+
+				<div class="sidebar-section" id="about-you">
+					<h5>About You</h5>
+					<ul>
+					<?php while (have_rows('about_you')): the_row();
+						$description = get_sub_field('description'); ?>
+						<li>&rarr; <?php echo $description; ?></li>
+					<?php endwhile; ?>
+					</ul>
+				</div>
+
+				<div class="sidebar-section" id="benefits">
+					<h5>Benefits</h5>
+					<ul>
+						<li>&rarr; 4-day work week</li>
+						<li>&rarr; 401k</li>
+						<li>&rarr; Health insurance</li>
+						<li>&rarr; Snacks (delivered 2 your home)</li>
+						<li>&rarr; Quarterly profit-sharing</li>
+						<li>&rarr; Employee-owned company</li>
+						<li>&rarr; Dogs &amp; kids encouraged in meetings</li>
+					</ul>
+				</div>
+
+
+			<?php } ?>
 
 			<?php if (have_rows('news_item')): ?>
 				<div class="sidebar-section" id="things-are-happening">

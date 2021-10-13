@@ -309,6 +309,11 @@ h2.projects {
   letter-spacing: -1.5px;
 }
 
+#newsletter-text #job-responsibilities ul li, #newsletter-text ul#how-we-work li {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
 #newsletter-text p {
   margin-bottom: 20px;
 }
@@ -820,4 +825,21 @@ h2.projects {
 #sidebar .item .source {
   font-size: 14px;
   margin-top: 15px;
+}
+
+#to-apply .btn {
+  background: #000000;
+  color: #ffffff;
+  padding: 10px 30px;
+  font-weight: bold;
+  clear: both;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+#to-apply .btn:hover {
+  background: #ff2a6e;
 }

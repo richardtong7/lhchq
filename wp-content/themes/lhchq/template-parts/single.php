@@ -73,9 +73,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="sidebar-section" id="to-apply">
 					<h5>To Apply</h5>
 					<div>
-						To apply for this job, email Sam Slaughter at <a href="mailto:sam@lhchq.com">sam@lhchq.com.</a>
+						To apply for this job, email Sam Slaughter at <a href="mailto:sam@lhchq.com?subject=<?php echo $page_title; ?>">sam@lhchq.com.</a>
 						<div class="clear"></div>
-						<a href="mailto:sam@lhchq.com" class="btn">APPLY NOW</a>
+						<a href="mailto:sam@lhchq.com?subject=<?php echo $page_title; ?>" class="btn">APPLY NOW</a>
 						<div class="clear"></div>
 					</div>
 				</div>

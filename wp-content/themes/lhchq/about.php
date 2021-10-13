@@ -7,6 +7,17 @@
 $description = get_field('description');
 $map = get_field('map');
 
+// Vars
+$ppp = 200;
+$posts = new WP_Query( array(
+  'post_type' => 'j',
+  'post_status' => 'publish',
+  'posts_per_page' => $ppp,
+  'orderby' => 'date',
+  'order' => 'DESC'
+  )
+);
+
 ?>
 <?php get_header();?>
 <style type="text/css">
@@ -138,23 +149,19 @@ $map = get_field('map');
       <div class="inner-container">
         <div class="eyebrow">Work With Us</div>
         <h2>Open roles.</h2>
-        <?php if (have_rows('role')) { ?>
+        <?php if ( $posts->have_posts() ) { ?>
           <div class="details">
-          <?php while (have_rows('role')): the_row();
-            $job_title = get_sub_field('job_title');
-            $url = get_sub_field('url');
-            ?>
-            <div class="item">
-              <?php if ($url) { ?>
-                <a href="<?php echo $url; ?>"><?php echo $job_title; ?></a>
-              <?php } else { ?>
-                <?php echo $job_title; ?>
-              <?php } ?>
-            </div>
-          <?php endwhile; ?>
+            <?php
+            while ( $posts->have_posts() ) : $posts->the_post();
+              $index = $total_post_count - ($posts->current_post);
+              $title = get_the_title();
+              ?>
+              <div class="item">
+                <a href="<?php the_permalink(); ?>"><?php echo $title; ?></a>
+              </div>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
           </div>
-        <?php } else { ?>
-          <!-- no open roles -->
         <?php } ?>
       </div>
 
